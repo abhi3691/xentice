@@ -1,0 +1,1 @@
+export  const  base_URl ="https://api.xentice.com/api/postadSelect" 
