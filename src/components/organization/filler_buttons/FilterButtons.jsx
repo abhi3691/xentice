@@ -1,7 +1,6 @@
 import { View, Text, TouchableHighlight } from "react-native";
 import React from "react";
 import styles from "./FilterButtonsStyle";
-import SwitchSelector from "react-native-switch-selector";
 import CustomColors from "../../../theme/Color";
 const FilterButtons = ({getLabel}) => {
   const [active, setActive] = React.useState(false);
