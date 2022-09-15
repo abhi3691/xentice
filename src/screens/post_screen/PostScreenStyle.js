@@ -5,7 +5,7 @@ import CustomColors from '../../theme/Color'
 const styles = StyleSheet.create({
     container:{
         backgroundColor: CustomColors.white,
-        width:ScreenRatio.width
+       flex:1
     }
 })
 
