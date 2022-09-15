@@ -1,10 +1,26 @@
-import { View, Text } from 'react-native'
+import { View, Text,ScrollView } from 'react-native'
 import React from 'react'
 import Header from '../../components/molecules/header/Header'
 import styles from './PostScreenStyle'
 import ProgressContainer from '../../components/organization/progress_container/ProgressContainer'
+import { usePostAdSelect } from '../../hooks/post_ad_select/usePostAdSelect'
+import PostAddList from '../../components/template/post_add_list/PostAddList'
 
 const PostScreen = () => {
+  const [postadSelect] = usePostAdSelect();
+  const [postData, setPostData] = React.useState([]);
+
+  //UseEffect
+  React.useEffect(() => {
+    getPostAdData();
+  }, [postData]);
+
+  //getPostAdd
+  const getPostAdData = async () => {
+    const res = await postadSelect();
+    setPostData(res);
+  };
+
   return (
     <View style={styles.container}>
     <Header  source={{
@@ -12,8 +28,17 @@ const PostScreen = () => {
         }} />
 
         <ProgressContainer
-        
+        title="ProPerty"
         />
+
+  {
+    postData.length !== 0 &&
+    <PostAddList
+    data={postData}
+    />
+  }
+
+
     </View>
   )
 }

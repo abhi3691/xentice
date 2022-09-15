@@ -16,9 +16,10 @@ import PostList from "../../components/template/post_list/PostList";
 import LandCardList from "../../components/template/land_card_list/LandCardList";
 import styles from "./HomeScreenStyle";
 const HomeScreen = () => {
+  const [postadSelect] = usePostAdSelect();
   const [postData, setPostData] = React.useState([]);
   const [searchQuery, setSearchQuery] = React.useState("");
-  const [postadSelect] = usePostAdSelect();
+
 
   //UseEffect
   React.useEffect(() => {

@@ -5,8 +5,10 @@ import styles from './ProgressContainerStyle'
 const ProgressContainer = ({title,progress}) => {
   return (
     <View style={styles.container}>
+      <View>
       <Text>{title}</Text>
       <Text>{"Progress Details >"}</Text>
+      </View>
     </View>
   )
 }

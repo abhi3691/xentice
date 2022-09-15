@@ -17,15 +17,16 @@ class PostList extends Component {
         return r1 != r2;
       }),
       postList: [],
-      extraData:{},
+      extraData: {},
     };
     this.layoutProvider = new LayoutProvider(
       (i) => {
         return this.state.list.getDataForIndex(i).type;
       },
-      (type, dim) => (
-        (dim.width = ScreenRatio.width / 2), (dim.height = ScreenRatio.height/4)
-      )
+      (type, dim) => {
+        (dim.width = ScreenRatio.width / 2),
+          (dim.height = ScreenRatio.height / 4);
+      }
     );
   }
 
@@ -48,7 +49,7 @@ class PostList extends Component {
             userid: datas[i].userid,
             images: datas[i].images,
             verified: datas[i].verified,
-            liked:false
+            liked: false,
           },
         });
         if (i == datas.length - 1) {
@@ -62,9 +63,7 @@ class PostList extends Component {
     }
   };
 
-  
-
-  rowRenderer = (type, data, index,extendedState) => {
+  rowRenderer = (type, data, index, extendedState) => {
     let {
       id,
       propertyType,
@@ -74,7 +73,7 @@ class PostList extends Component {
       userid,
       images,
       verified,
-      liked
+      liked,
     } = data.item;
 
     propertyType = JSON.parse(propertyType);
@@ -91,25 +90,23 @@ class PostList extends Component {
         priceRange={priceRange}
         propertyType={propertyType}
         liked={liked}
-        changeLike={()=> this.changeLikeFunction(index)}
+        changeLike={() => this.changeLikeFunction(index)}
       />
     );
   };
 
-  
-  changeLikeFunction=(index)=>{
-    this.state.postList[index].item.liked = !this.state.postList[index].item.liked
-    this.setState({extraData:this.state.postList[index].item.liked})
-  }
+  changeLikeFunction = (index) => {
+    this.state.postList[index].item.liked =
+      !this.state.postList[index].item.liked;
+    this.setState({ extraData: this.state.postList[index].item.liked });
+  };
 
-  renderFooter=()=>{
-    return(
-      <View style={styles.footer}/>
-    )
-  }
+  renderFooter = () => {
+    return <View style={styles.footer} />;
+  };
 
   render() {
-    let { list, postList,extraData } = this.state;
+    let { list, postList, extraData } = this.state;
     return (
       <View style={styles.container}>
         {postList.length !== 0 && (
@@ -118,7 +115,9 @@ class PostList extends Component {
             layoutProvider={this.layoutProvider}
             rowRenderer={this.rowRenderer}
             renderFooter={this.renderFooter}
-            extendedState={{state:extraData}}
+            extendedState={{ state: extraData }}
+            showsVerticalScrollIndicator={false}
+            forceNonDeterministicRendering={false}
           />
         )}
       </View>

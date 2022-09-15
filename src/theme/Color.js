@@ -8,7 +8,8 @@ const CustomColors ={
     lightRed:"#F55757",
     darkRed:"#D95A5A",
     black:"#000000",
-    white:"#ffffff"
+    white:"#ffffff",
+    lightWhite:"#F6F4F4"
 }
 
 export default CustomColors

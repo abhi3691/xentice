@@ -3,7 +3,7 @@ import ScreenRatio from '../../../global_functions/screen_ratio/ScreenRatio';
 
 const styles = StyleSheet.create({
     container:{
-        height:ScreenRatio.height/6,
+        height:ScreenRatio.height/7.5,
         width:ScreenRatio.width
     }
 })

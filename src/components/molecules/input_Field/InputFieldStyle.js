@@ -4,14 +4,14 @@ import CustomColors from '../../../theme/Color';
 
 const styles = StyleSheet.create({
 container:{
-    height:ScreenRatio.height/10,
+    height:ScreenRatio.height/15,
     width:ScreenRatio.width,
     alignItems:'center',
     justifyContent:'center',
 },
 input:{
-    width:ScreenRatio.width/1.2,
-    height:ScreenRatio.height/15,
+    width:ScreenRatio.width/1.1,
+    height:ScreenRatio.height/18,
     backgroundColor:CustomColors.white,
 }
 })
