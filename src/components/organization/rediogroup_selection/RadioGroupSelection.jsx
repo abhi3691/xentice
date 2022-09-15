@@ -4,7 +4,7 @@ import RadioButton from "../../atom/radio_button/RadioButton";
 import styles from "./RadioGroupSelectionStyle";
 
 const RadioGroupSelection = ({ options }) => {
-  const [activeIndex, setActiveIndex] = React.useState();
+  const [activeIndex, setActiveIndex] = React.useState(0);
 
   const chnageIndex = (index) => {
     setActiveIndex(index);
