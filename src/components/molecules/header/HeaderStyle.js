@@ -6,11 +6,11 @@ import CustomColors from '../../../theme/Color';
 const styles = StyleSheet.create({
     container:{
         height:ScreenRatio.height/10,
-        width:ScreenRatio.width,
+        width:ScreenRatio.width-25,
         alignItems:'center',
         flexDirection:'row',
         justifyContent:'space-between',
-        paddingHorizontal:20
+        paddingLeft:15,
     },
     leftContainer:{
         flexDirection:'row',

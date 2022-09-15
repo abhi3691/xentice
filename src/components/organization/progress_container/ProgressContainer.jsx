@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const PostScreen = () => {
+const ProgressContainer = () => {
   return (
     <View>
-      <Text>PostScreen</Text>
+      <Text>ProgressContainer</Text>
     </View>
   )
 }
 
-export default PostScreen
+export default ProgressContainer
