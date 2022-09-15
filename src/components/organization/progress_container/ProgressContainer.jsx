@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const ProgressContainer = () => {
+const ProgressContainer = ({title,progress}) => {
   return (
     <View>
-      <Text>ProgressContainer</Text>
+      <Text>{title}</Text>
+      <Text>{"Progress Details >"}</Text>
     </View>
   )
 }
